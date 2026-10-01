@@ -34,7 +34,7 @@ export class DatabaseConnection {
   public async connect(): Promise<void> {
     try {
       await this.sequelize.authenticate();
-      console.log("✅ Conexión a PostgreSQL establecida usando Singleton.");
+      console.log("Conexión a PostgreSQL establecida usando Singleton.");
     } catch (error) {
       console.error("Error conectando a la base de datos:", error);
     }
