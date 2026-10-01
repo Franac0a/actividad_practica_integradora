@@ -18,6 +18,8 @@ export interface User {
 
 export interface Notification {
   id: number;
+  userId: number;
+  productId: number;
   message: string;
   read: boolean;
   createdAt: string;
