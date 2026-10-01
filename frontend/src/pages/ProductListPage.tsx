@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
+import Can from "../components/Can";
 
 import { getProducts } from "../api/products.api";
 import type { Product } from "../types";
@@ -39,6 +40,11 @@ function ProductListPage() {
   return (
     <main>
       <h1>Productos</h1>
+      <Can permission="product:create">
+  <Link to="/products/new">
+    Crear producto
+  </Link>
+</Can>
 
       {products.length === 0 ? (
         <p>No hay productos disponibles.</p>

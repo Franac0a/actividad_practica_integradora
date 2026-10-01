@@ -26,7 +26,15 @@ function App() {
         <Route path="/products/:id" element={<ProductDetailPage />} />
 
         <Route element={<ProtectedRoute />}>
-          <Route path="/products/new" element={<ProductFormPage />} />
+          <Route
+            path="/products/new"
+            element={<ProductFormPage />}
+          />
+
+          <Route
+            path="/products/:id/edit"
+            element={<ProductFormPage />}
+          />
 
           <Route
             path="/notifications"
