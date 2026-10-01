@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 
+import Navbar from "./components/Navbar";
+
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import ProductListPage from "./pages/ProductListPage";
@@ -11,6 +13,8 @@ import AdminUsersPage from "./pages/AdminUsersPage";
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
+
       <Routes>
         <Route path="/" element={<ProductListPage />} />
 
